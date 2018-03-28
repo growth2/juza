@@ -2,6 +2,7 @@ package juza;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 
 import org.junit.Test;
@@ -11,6 +12,8 @@ import com.google.common.io.ByteStreams;
 public class ZipInputStreamTest {
 
 	/**
+	 * http://bugs.java.com/view_bug.do?bug_id=4532049
+	 * JDK-4532049 : IllegalArgumentException in ZipInputStream while reading unicode file
 	 * java.lang.IllegalArgumentException
 	 */
 	@Test
